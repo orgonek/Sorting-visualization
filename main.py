@@ -3,10 +3,12 @@ from matplotlib import animation
 import numpy as np
 from numpy import random
 from algorithms.selection_sort import selection_sort
+from algorithms.insertion_sort import insertion_sort
+
 
 NUMBERS = 30
 X_AXIS = np.arange(1,31,1)
-data = np.random.choice(range(101), NUMBERS, replace=False)
+data = np.random.choice(range(100), NUMBERS, replace=False)
 
 fig = plt.figure()
 rects = plt.bar(X_AXIS, X_AXIS, color='#45b6fe')
@@ -19,5 +21,5 @@ def animate(i):
     return rect
 
 
-anim = animation.FuncAnimation(fig, animate, frames = selection_sort(data), interval=100)
+anim = animation.FuncAnimation(fig, animate, frames = insertion_sort(data), interval=100)
 plt.show()
