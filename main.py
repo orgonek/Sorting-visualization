@@ -24,5 +24,5 @@ def animate(i):
     return rect
 
 
-anim = animation.FuncAnimation(fig, animate, frames = selection_sort(data), interval=1, repeat=False)
+anim = animation.FuncAnimation(fig, animate, frames = quick_sort(data, 0, len(data)-1), interval=1, repeat=False)
 plt.show()
