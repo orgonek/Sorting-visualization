@@ -5,13 +5,13 @@ from numpy.core.fromnumeric import repeat
 from algorithms.selection_sort import selection_sort
 from algorithms.insertion_sort import insertion_sort
 from algorithms.bubble_sort import bubble_sort
-from algorithms.merge_sort import merge_sort
+from algorithms.quick_sort import quick_sort
 
 
 
 
-NUMBERS = 100
-X_AXIS = np.arange(1,101,1)
+NUMBERS = 50
+X_AXIS = np.arange(1,51,1)
 data = np.random.choice(range(100), NUMBERS, replace=False)
 
 fig = plt.figure()
@@ -24,5 +24,5 @@ def animate(i):
     return rect
 
 
-anim = animation.FuncAnimation(fig, animate, frames = merge_sort(data,0, 100), interval=1, repeat=False)
+anim = animation.FuncAnimation(fig, animate, frames = quick_sort(data, 0, len(data) -1 ), interval=1, repeat=False)
 plt.show()
