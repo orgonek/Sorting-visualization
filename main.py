@@ -1,11 +1,11 @@
 from matplotlib import pyplot as plt
 from matplotlib import animation
 import numpy as np
-from numpy.core.fromnumeric import repeat
 from algorithms.selection_sort import selection_sort
 from algorithms.insertion_sort import insertion_sort
 from algorithms.bubble_sort import bubble_sort
 from algorithms.quick_sort import quick_sort
+
 
 
 
@@ -24,5 +24,5 @@ def animate(i):
     return rect
 
 
-anim = animation.FuncAnimation(fig, animate, frames = quick_sort(data, 0, len(data) -1 ), interval=1, repeat=False)
+anim = animation.FuncAnimation(fig, animate, frames = selection_sort(data), interval=1, repeat=False)
 plt.show()

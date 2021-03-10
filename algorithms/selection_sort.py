@@ -1,15 +1,14 @@
-def selection_sort(arr):
-    length = len(arr)
+def selection_sort(list):
+    length = len(list)
 
     for i in range(length - 1):
         min = i
         
         for j in range(i+1, length):
-            if arr[j] < arr[min]:
+            if list[j] < list[min]:
                 min = j
+            yield 
         
         if min != i: 
-            arr[min], arr[i] = arr[i], arr[min]
-
-        yield arr
-
+            list[min], list[i] = list[i], list[min]
+            yield list
