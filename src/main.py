@@ -1,18 +1,14 @@
 from matplotlib import pyplot as plt
 from matplotlib import animation
 import numpy as np
-from algorithms.selection_sort import selection_sort
-from algorithms.insertion_sort import insertion_sort
-from algorithms.bubble_sort import bubble_sort
 from algorithms.quick_sort import quick_sort
-
-
-
+from data import DataGenerator
 
 
 NUMBERS = 50
 X_AXIS = np.arange(1,51,1)
-data = np.random.choice(range(100), NUMBERS, replace=False)
+generator = DataGenerator(NUMBERS, max_value=100)
+data =  generator.random()
 
 fig = plt.figure()
 rects = plt.bar(X_AXIS, X_AXIS, color='#fda4ba')
