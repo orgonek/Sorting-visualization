@@ -1,7 +1,7 @@
 import numpy as np
 
 class DataGenerator:
-    def __init__(self, numbers : int = 50, max_value : int = 100):
+    def __init__(self, numbers : int = 50, max_value : int = 200):
         self.numbers = numbers
         self.max_value = max_value
 
