@@ -9,7 +9,8 @@ class DataGenerator:
         return np.random.choice(range(self.max_value), self.numbers, replace = True)
 
     def reversed(self) -> list:
-        return np.arange(self.max_value, self.max_value - self.numbers, -1)
+        return sorted(np.random.randint(self.max_value, size=(self.numbers)), reverse=True)
+
 
     def part_sorted(self) -> list:
         sorted = np.arange(1, np.random.randint(self.numbers // 2), 1)
