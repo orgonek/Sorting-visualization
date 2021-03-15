@@ -17,6 +17,8 @@ class Visualizer:
         self.fig = plt.figure()
         self.x_axis = np.arange(1, len(self.data) + 1, 1)
         self.rects = plt.bar(self.x_axis, max(self.data), color='#00FF00')
+        self.xlabel = plt.xlabel('Amount of data')
+        self.ylabel = plt.ylabel('Value')
     
     def visualize_algorithm(self, name : str = 'insertion_sort'):
         """ Visualizes a specific algorithm """
@@ -29,7 +31,7 @@ class Visualizer:
         }
 
         algorithm = options[name]
-
+        plt.title(name)
         self.ani = animation.FuncAnimation(self.fig, func=self._update_animation, frames=algorithm, interval=1, repeat=False)
         plt.show()
 
