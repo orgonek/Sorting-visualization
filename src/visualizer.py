@@ -10,6 +10,7 @@ from algorithms.selection_sort import selection_sort
 
 
 class Visualizer:
+    """ Class used for data visualization"""
 
     def __init__(self, data : list):
         self.data = data
@@ -18,6 +19,7 @@ class Visualizer:
         self.rects = plt.bar(self.x_axis, max(self.data), color='#00FF00')
     
     def visualize_algorithm(self, name : str = 'insertion_sort'):
+        """ Visualizes a specific algorithm """
         options = {
             'insertion_sort' : insertion_sort(self.data),
             'bubble_sort' : bubble_sort(self.data),

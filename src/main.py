@@ -10,6 +10,7 @@ def cli():
 @click.option('--data', default='random', help='How the data will be generated (random, reversed, partsorted)', type=str)
 @click.argument('algorithm', type=str)
 def visualize_algorithm(algorithm, data):
+    """ Responsible for user interaction, using cli  """
     g = DataGenerator()
     options = ['bubble_sort', 'insertion_sort', 'merge_sort', 'quick_sort', 'selection_sort']
     options_data = {'random': g.random(), 'reversed' : g.reversed(), 'partsorted' : g.part_sorted()}

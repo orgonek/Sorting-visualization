@@ -1,4 +1,3 @@
-
 def quick_sort(list, start, end):
     if start >= end:
         return
