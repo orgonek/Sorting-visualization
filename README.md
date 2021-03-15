@@ -4,6 +4,8 @@
 A console application, written using Python language. The project contains implementation of various sorting algorithms.
 Scripts allow the user to see an animation of sorting a list of numbers using a specific algorithm and data type.
 
+![DEMO SAMPLE](https://github.com/orgonek/Sorting-visualization/blob/master/sample.gif)
+
 ### Available algorithms
 - bubble_sort
 - quick_sort
